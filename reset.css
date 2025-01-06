@@ -13,7 +13,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: linear-gradient(135deg, #2D3436, #363b3c, #001904, #00B894);
+    background: linear-gradient(135deg, #5b686c, #47e0ff, #138225, #8ff7e2);
     background-size: 400% 100%;
     background-attachment: fixed; /* Keeps background fixed in place */
     animation: gradientWave 8s ease infinite;
