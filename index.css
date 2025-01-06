@@ -394,13 +394,16 @@
   /* Specific Background Gradients */
   .update-item:nth-child(1) {
   background: linear-gradient(135deg, #2D3436, #636E72, #001904, #00B894);
+  outline: none;
   }
 
   .update-item:nth-child(2) {
     background: linear-gradient(135deg, #2D3436, #636E72, #001904, #00B894);
+    outline: none;
 }
   .update-item:nth-child(3) {
   background: linear-gradient(135deg, #2D3436, #636E72, #001904, #00B894);
+  outline: none;
   }
   
   .update-item h3 {
