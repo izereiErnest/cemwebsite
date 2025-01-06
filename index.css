@@ -63,7 +63,7 @@
     border-radius: 15px; /* Rounded corners */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
     width: 100%; /* Ensure it is responsive */
-    max-width: 350px; /* Max width to control card size */
+    max-width: 200px; /* Max width to control card size */
     padding: 3rem; /* Add padding */
     margin-left: auto; /* Center the card horizontally */
     margin-right: auto;
