@@ -37,7 +37,7 @@
 }
 
   .hero-text h1 {
-    color: #000000;
+    color: #ffffff;
     z-index: 1;
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -57,7 +57,7 @@
     font-size: 1em; /* Adjust font size */
     margin-top: 1rem;
     line-height: 1.6; /* Adjust line height for readability */
-    color: var(--text-color); /* Text color */
+    color: rgb(8, 58, 8); /* Text color */
     background: linear-gradient(135deg, #03ff2d, #68f3d7); /* Gradient background */
     text-align: center;
     border-radius: 15px; /* Rounded corners */
