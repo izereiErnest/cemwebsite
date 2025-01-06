@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the CEM Community website. Stay updated with our events, resources, and programs.">
+  <meta name="author" content="CEM Community">
+  <title>Home | CEM Community</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6fd5dcc666.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="9.png" alt="CEM Community Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="menu-toggle">
+      <i class="fas fa-cog" aria-hidden="true"></i> <!-- Gear icon for menu -->
+      <span class="sr-only">Toggle menu</span> <!-- Screen reader text -->
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+        <li><a href="About.html" aria-label="About"><i class="fas fa-circle-info"></i></a></li>
+        <li><a href="PrayerTimes.html" aria-label="Prayer Times"><i class="fas fa-pray"></i></a></li>
+        <li><a href="Resources.html" aria-label="Resources"><i class="fas fa-book"></i></a></li>
+        <li><a href="Events.html" aria-label="Events"><i class="fas fa-calendar-alt"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <video autoplay loop muted>
+    <source src="B1CEM.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-text">
+    <h1>Welcome to the CEM Community Website</h1>
+    <p id="hadith-display" aria-live="polite">
+      "Indeed, the prayer has been decreed upon the believers a decree of specified times." (Quran 4:103)
+    </p>
+  </div>
+</section>
+
+  <div class="image-slider">
+    <div class="slider-row left-to-right">
+      <div class="slider-thread"></div>
+      <div class="slider-track">
+        <div class="image-container"><img src="Assets/Images/scroll1.jpg" alt="Image 1"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll2.jpg" alt="Image 2"></div>
+        <div class="image-container"><img src="Assets/Images/scroll3.jpg" alt="Image 3"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll4.jpg" alt="Image 4"></div>
+        <div class="image-container"><img src="Assets/Images/scroll1.jpg" alt="Image 1"></div> <!-- Duplicate for smooth looping -->
+        <div class="image-container"><img src="Assets/Images/Scroll2.jpg" alt="Image 2"></div>
+        <div class="image-container"><img src="Assets/Images/scroll3.jpg" alt="Image 3"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll4.jpg" alt="Image 4"></div>
+      </div>
+    </div>
+  
+    <div class="slider-row right-to-left">
+      <div class="slider-thread"></div>
+      <div class="slider-track">
+        <div class="image-container"><img src="Assets/Images/Scroll5.jpg" alt="Image 5"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll6.jpg" alt="Image 6"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll7.jpg" alt="Image 7"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll8.jpg" alt="Image 8"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll5.jpg" alt="Image 5"></div> <!-- Duplicate for smooth looping -->
+        <div class="image-container"><img src="Assets/Images/Scroll6.jpg" alt="Image 6"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll7.jpg" alt="Image 7"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll8.jpg" alt="Image 8"></div>
+      </div>
+    </div>
+  
+    <div class="slider-row left-to-right">
+      <div class="slider-thread"></div>
+      <div class="slider-track">
+        <div class="image-container"><img src="Assets/Images/Scroll9.jpg" alt="Image 9"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll10.jpg" alt="Image 10"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll11.jpg" alt="Image 11"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll12.jpg" alt="Image 12"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll9.jpg" alt="Image 9"></div> <!-- Duplicate for smooth looping -->
+        <div class="image-container"><img src="Assets/Images/Scroll10.jpg" alt="Image 10"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll11.jpg" alt="Image 11"></div>
+        <div class="image-container"><img src="Assets/Images/Scroll12.jpg" alt="Image 12"></div>
+      </div>
+    </div>
+  </div>
+  <div>
+
+  <!-- Updates Section -->
+  <section class="updates">
+    <h2>INSIDE CEM</h2>
+    <div class="updates-container">
+      <a href="helping-patients.html" class="update-item">
+        <h3>Helping Patients</h3>
+      </a>
+      <a href="cem-groups.html" class="update-item">
+        <h3>CEM Groups</h3>
+      </a>
+      <a href="general-gatherings.html" class="update-item">
+        <h3>Gatherings</h3>
+      </a>
+    </div>
+    <div>
+      <a href="Donations.html" class="btn-primary" aria-label="Donate Now">Donate</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 CEM. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="legal-links">
+        <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+        <a href="terms-conditions.html" class="legal-link">Terms & Conditions</a>
+      </div>
+      <div class="social-links">
+        <a href="https://wa.me/250783486293" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://x.com/cemurhuyecampus" target="_blank" class="social-icon x" aria-label="Twitter">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://instagram.com/cemurhuye_campus" target="_blank" class="social-icon instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="reset.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

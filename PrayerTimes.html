@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer Times</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="PrayerTimes.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6fd5dcc666.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="9.png" alt="Logo" class="logo-img">
+    </div>
+    <div class="menu-toggle">
+      <i class="fas fa-cog"></i> <!-- Gear icon for menu -->
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+        <li><a href="About.html"><i class="fas fa-circle-info"></i></a></li>
+        <li><a href="PrayerTimes.html"><i class="fas fa-pray"></i></a></li>
+        <li><a href="Resources.html"><i class="fas fa-book"></i></a></li>
+        <li><a href="Events.html"><i class="fas fa-calendar-alt"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="prayer-hero">
+    <h1>Daily Prayer Timings</h1>
+    <p>Stay updated with accurate prayer timings for your area.</p>
+  </section>
+
+  <section class="prayer-timings">
+    <div class="timing-item">
+      <h3>Fajr</h3>
+      <p id="fajr-time">Loading...</p>
+    </div>
+    <div class="timing-item">
+      <h3>Dhuhr</h3>
+      <p id="dhuhr-time">Loading...</p>
+    </div>
+    <div class="timing-item">
+      <h3>Asr</h3>
+      <p id="asr-time">Loading...</p>
+    </div>
+    <div class="timing-item">
+      <h3>Maghrib</h3>
+      <p id="maghrib-time">Loading...</p>
+    </div>
+    <div class="timing-item">
+      <h3>Isha</h3>
+      <p id="isha-time">Loading...</p>
+    </div>
+  </section>
+
+  <!-- Location Card Section -->
+  <section class="location-card">
+    <div class="card">
+      <h3>Your Location</h3>
+      <p>Find accurate prayer times based on your current location.</p>
+      <p id="location">Loading location...</p> <!-- User's location will be shown here -->
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 CEM. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="legal-links">
+        <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+        <a href="terms-conditions.html" class="legal-link">Terms & Conditions</a>
+      </div>
+      <div class="social-links">
+        <a href="https://wa.me/250783486293" target="_blank" class="social-icon whatsapp">
+          <i class="fab fa-whatsapp"></i> <!-- WhatsApp Icon -->
+        </a>
+        <a href="https://x.com/cemurhuyecampus" target="_blank" class="social-icon x">
+          <i class="fab fa-x-twitter"></i> <!-- X Icon -->
+        </a>
+        <a href="https://instagram.com/cemurhuye_campus" target="_blank" class="social-icon instagram">
+          <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="reset.js"></script>
+  <script src="PrayerTimes.js"></script>
+</body>
+</html>

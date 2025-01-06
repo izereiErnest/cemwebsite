@@ -1,0 +1,72 @@
+/* Color Palette */
+:root {
+  --primary-color: linear-gradient(135deg, #2C3E50, #3A5F44);
+  --secondary-color: #F4EDE3;
+  --text-color: #5A5A5A;
+  --link-hover-color: #C4A661;
+  --highlight-color: #2575FC;
+  --light-text-color: #FFFFFF;
+  --dark-text-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  margin: 1rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transform: translateY(-20px); /* Start slightly above */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+}
+/* Fade In and Move Up Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-family: 'Georgia', serif;
+  color: var(--secondary-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* History Details Section */
+.history-details {
+  padding: 2rem;
+  background: linear-gradient(135deg, #162c42, #144020);
+  border-radius: 30px;
+  margin: 1rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.history-details h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: gray;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.history-details p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: gray;
+  letter-spacing: 0.1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

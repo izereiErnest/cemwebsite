@@ -1,0 +1,76 @@
+/* Hero Section with Gradient Background */
+.about-hero {
+  background: linear-gradient(135deg, #081b2d, #113d1d); /* Primary gradient */
+  color: #FFFFFF; /* Light text color */
+  text-align: center;
+  padding: 5rem;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow color */
+  opacity: 0; /* Start as invisible */
+  transform: translateY(-20px); /* Start slightly above */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+}
+
+/* Fade In and Move Up Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: blue; /* Light text color */
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #F4EDE3; /* Secondary color for text */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Team Section */
+.team {
+  background: linear-gradient(135deg, #162c42, #144020); /* Primary gradient */
+  color: gray; /* Light text color */
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow color */
+  margin: 20px;
+  opacity: 0; /* Start as invisible */
+  letter-spacing: 0.1rem;
+  transform: translateX(-50px); /* Start from the left */
+  animation: slideInRight 1s forwards; /* Apply the new slide-in animation */
+}
+
+/* Slide In from the Right Animation */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  background: #F4EDE3; /* Secondary color for cards */
+  color: #333333; /* Dark text color */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Shadow color */
+  text-align: left;
+  opacity: 0; /* Start as invisible */
+  transform: translateX(-50px); /* Start from the left */
+  animation: slideInRight 1s forwards 0.3s; /* Delay for team-member cards */
+}
+

@@ -1,0 +1,171 @@
+/* Color Palette */
+:root {
+  --primary-color: linear-gradient(135deg, #2C3E50, #3A5F44);
+  --secondary-color: #F4EDE3;
+  --text-color: #5A5A5A;
+  --link-hover-color: #C4A661;
+  --highlight-color: #2575FC;
+  --light-text-color: #FFFFFF;
+  --dark-text-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  margin: 1rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transform: translateY(-20px); /* Start slightly above */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Fade In and Move Up Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-family: 'Georgia', serif;
+  color: var(--secondary-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Groups Section */
+.groups-section {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Slight overlay for better contrast */
+  border-radius: 30px;
+  margin: 2rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transform: translateX(-50px); /* Start from the left */
+  animation: slideInRight 1s forwards; /* Apply the new slide-in animation */
+}
+
+/* Slide In from the Right Animation */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+}
+
+
+.groups-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px var(--shadow-color);
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Groups Container */
+.groups-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Group Card */
+.group-card {
+  background: rgb(27, 25, 25);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  color: var(--dark-text-color);
+  font-size: 1rem;
+  position: relative;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s, height 0.3s, width 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.group-card:hover {
+  height: 300px;
+  width: 300px;
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+/* Group Card Content */
+.group-card h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.group-card .group-details {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 1rem;
+  color: var(--text-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.group-card:hover .group-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Detail Items */
+.group-card .group-details .detail-item {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 5px var(--shadow-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-card .group-details .detail-item strong {
+  color: blue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .groups-section h1 {
+    font-size: 2rem;
+  }
+
+  .groups-container {
+    gap: 1rem;
+  }
+
+  .group-card {
+    width: 90%;
+  }
+}

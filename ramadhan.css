@@ -1,0 +1,107 @@
+/* Color Palette */
+:root {
+  --primary-color: linear-gradient(135deg, #2C3E50, #3A5F44);
+  --secondary-color: #F4EDE3;
+  --text-color: #5A5A5A;
+  --link-hover-color: #C4A661;
+  --highlight-color: #2575FC;
+  --light-text-color: #FFFFFF;
+  --dark-text-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transform: translateY(-20px); /* Start slightly above */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+}
+
+/* Fade In and Move Up Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--secondary-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Activities Section */
+.activities {
+  margin: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transform: translateX(-50px); /* Start from the left */
+  animation: slideInRight 1s forwards; /* Apply the new slide-in animation */
+}
+
+/* Slide In from the Right Animation */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+}
+
+.activities h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding: 7px;
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Cards Container */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Cards */
+.card {
+  background: rgb(9, 9, 9);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: blue;
+}
+
+.card p {
+  margin: 10px 0 0;
+  color: var(--text-color);
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

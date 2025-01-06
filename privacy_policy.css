@@ -1,0 +1,44 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+  color: #023e8a;
+  line-height: 1.6;
+}
+
+
+
+/* Section Content */
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  text-align: center;
+  color: #0288d1;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: #023e8a;
+  margin-bottom: 1.5rem;
+}
+
+.content a {
+  color: #0288d1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.content a:hover {
+  color: #00bcd4;
+}
+
+

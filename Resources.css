@@ -1,0 +1,423 @@
+/* Existing Hero Section */
+.resources-hero {
+  background: linear-gradient(135deg, #14293e, #114920);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 1s forwards;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Existing Hero Elements */
+.resources-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.resources-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #F4EDE3;
+}
+
+/* Updated Resources Grid */
+.resources-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  opacity: 0;
+  animation: slideInUp 0.7s ease-out forwards;
+}
+
+/* Enhanced Resource Items */
+.resource-item {
+  background: #2D3436;
+  color: #333333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.resource-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.resource-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.resource-item p {
+  font-size: 1rem;
+  color: #B0B0B0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* New Styles for Interactive Features */
+.resource-content {
+  display: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+}
+
+.resource-item.expanded .resource-content {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.resource-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.resource-file:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.file-size {
+  color: #888;
+  font-size: 0.875rem;
+}
+
+.download-icon {
+  color: #4CAF50;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.download-icon:hover {
+  background: rgba(76, 175, 80, 0.1);
+  transform: scale(1.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.resource-item.expanded .close-button {
+  opacity: 1;
+}
+.app-entry {
+  background: #000000;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+.app-entry h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.store-links {
+  display: flex;
+  gap: 10px;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.play-store {
+  background-color: #34a853;
+}
+
+.play-store:hover {
+  background-color: #2e8e47;
+}
+
+.app-store {
+  background-color: #0071e3;
+}
+
+.app-store:hover {
+  background-color: #005bb5;
+}
+
+.store-btn i {
+  margin-right: 8px;
+}
+.podcast-entry {
+  background: #000000;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+.podcast-entry h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.podcast-entry p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.podcast-links {
+  display: flex;
+  gap: 10px;
+}
+
+.podcast-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.muslim-central {
+  background-color: #071a37;
+}
+
+.muslim-central:hover {
+  background-color: #1c5ca1;
+}
+
+.spotify {
+  background-color: #0e5e2a;
+}
+
+.spotify:hover {
+  background-color: #1aa34a;
+}
+
+.boomplay {
+  background-color: #0f0c7e;
+}
+
+.boomplay:hover  {
+  background-color: #2746ae;
+}
+
+.youtube {
+  background-color: #a71a1a;
+}
+
+.youtube:hover {
+  background-color: #e82c2c;
+}
+
+.soundcloud {
+  background-color: rgb(182, 123, 12);
+}
+
+.soundcloud:hover {
+  background-color: #e3cb2d;
+}
+
+.podcast-btn i {
+  margin-right: 8px;
+}
+/* Style for the webinar button */
+.webinar-btn {
+  display: flex;
+  width: 250px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.webinar-btn i {
+  margin-right: 10px;
+}
+
+/* Deep YouTube Red for the background */
+.webinar-btn.youtube {
+  background-color: #8c0d09; /* Deep YouTube Red */
+}
+
+/* Hover effect */
+.webinar-btn:hover {
+  background-color: #540909; /* Lighter shade of red */
+
+}
+
+/* Active effect */
+.webinar-btn:active {
+  transform: scale(1);
+}
+/* Style for the image gallery inside the articles section */
+.resource-item .image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between images */
+  justify-content: center; /* Center images within the container */
+}
+
+.resource-item .gallery-image {
+  width: 350px; /* Set the width of each image */
+  height: 250px; /* Set the height of each image */
+  object-fit: cover; /* Make sure the image covers the dimensions without distortion */
+  border-radius: 30px; /* Add a 30px border radius for rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Show cursor as pointer to indicate clickability */
+}
+
+/* Hover effect for images */
+.resource-item .gallery-image:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect when hovering */
+}
+
+/* Modal styling */
+.modal {
+  display: none; /* Hide modal by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Background overlay */
+  padding-top: 60px;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close-modal {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1200px) {
+  .resource-item .gallery-image {
+    width: 200px; /* Reduce the size for large screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .resource-item .gallery-image {
+    width: 350px; /* Reduce the size for tablet-sized screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .resource-item .gallery-image {
+    width: 250px; /* Reduce size further for small screens */
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

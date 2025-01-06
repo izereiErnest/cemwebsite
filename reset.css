@@ -1,0 +1,364 @@
+:root {
+    --primary-color: #2D3436; /* Dark Charcoal */
+    --secondary-color: #636E72; /* Muted Gray */
+    --text-color: #D5DBDB; /* Light Gray */
+    --link-hover: #00B894; /* Bright Mint */
+    --highlight-color: #F39C12; /* Golden Yellow */
+    --light-text-color: #FFFFFF; /* Pure White */
+    --dark-text-color: #1C1C1C; /* Almost Black */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Dark Shadow */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #2D3436, #363b3c, #001904, #00B894);
+    background-size: 400% 100%;
+    background-attachment: fixed; /* Keeps background fixed in place */
+    animation: gradientWave 8s ease infinite;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #3f3e3d;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3A5F44;
+    border-radius: 10px;
+  }
+  
+
+@keyframes gradientWave {
+    0% {
+        background-position: 0% 0%; /* Start at the left edge */
+    }
+    50% {
+        background-position: 100% 0%; /* Move to the right edge */
+    }
+    100% {
+        background-position: 0% 0%; /* Return to the left edge */
+    }
+}
+
+/* Header with Floating Bar */
+header {
+    background: var(--primary-color); /* Background color or gradient */
+    color: var(--light-text-color);
+    padding: 1rem 2rem; /* Padding inside the header */
+    position: relative; /* Fix the header at the top */
+    top: 2rem; /* Move the header down by 2rem (adjust this value as needed) */
+    left: 50%; /* Center the header */
+    transform: translateX(-50%); /* Center the header */
+    height: 15px;
+    width: calc(95% - 4rem); /* Take full width minus padding (2rem each side) */
+    border-radius: 25px; /* Rounded edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Floating shadow effect */
+    z-index: 10; /* Ensure the header stays above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Bar */
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Links */
+header nav ul li a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    padding: 0.05rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin: 0 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circular links */
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+/* Logo Styling */
+header .logo {
+    opacity: 90%;
+    position: relative;
+    top: 0px;
+}
+
+header .logo-img {
+    width: 100px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Hover Effect */
+header nav ul li a:hover,
+header nav ul li a.active {
+    background: var(--link-hover);
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+/* Icon Styling */
+header nav ul li a i {
+    color: var(--light-text-color);
+    transition: color 0.3s ease;
+}
+
+/* Optional: Adjust icon color on hover */
+header nav ul li a:hover i {
+    color: var(--text-color);
+}
+
+/* Active State */
+header nav ul li a.active {
+    background: var(--link-hover);
+    color: var(--light-text-color);
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #1d1e1e; /* Dark background for the footer */
+    color: #fff; /* White text color */
+    padding: 1.5rem 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative; /* Ensure proper positioning for all elements */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right */
+    align-items: center;
+    max-width: 1200px; /* Optional: restrict max width */
+    margin: 0 auto; /* Center the content horizontally */
+    width: 100%; /* Ensure the footer takes the full width */
+}
+
+.footer p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+    flex-grow: 1; /* Allow the paragraph to take up available space */
+}
+
+.legal-links, .social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Vertically align items in both sections */
+}
+
+.legal-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+    color: #00B894; /* Hover color for links */
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00B894; /* Change to your desired hover color */
+}
+  
+/* Toggle Menu Button */
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 100; /* Ensure it stays on top of everything */
+}
+
+.menu-toggle i {
+    color: var(--light-text-color); /* Set the color for the gear icon */
+    font-size: 30px; /* Adjust the size of the gear icon */
+    transition: color 0.3s ease;
+}
+
+/* Change icon color on hover */
+.menu-toggle:hover i {
+    color: var(--link-hover); /* Change color on hover */
+}
+
+/* Clockwise Spin Animation */
+@keyframes spin-clockwise {
+    0% {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* End at 360 degrees (full circle) */
+    }
+}
+
+/* Counterclockwise Spin Animation */
+@keyframes spin-counterclockwise {
+    0% {
+        transform: rotate(360deg); /* Start at 360 degrees */
+    }
+    100% {
+        transform: rotate(0deg); /* End at 0 degrees */
+    }
+}
+
+/* Apply clockwise spin when menu toggle is active */
+.menu-toggle.active i {
+    animation: spin-clockwise 1s ease forwards; /* 1 second clockwise spin */
+}
+
+/* Apply counterclockwise spin when menu toggle is inactive */
+.menu-toggle:not(.active) i {
+    animation: spin-counterclockwise 1s ease forwards; /* 1 second counterclockwise spin */
+}
+
+
+/* Navigation Menu - Default */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul.hidden {
+    display: none; /* Hide menu for smaller screens */
+    flex-direction: column;
+    background: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: var(--dark-text-color); /* Dark Text Color */
+    font-size: 24px; /* Size of icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--link-hover); /* Highlight color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.navbar a i {
+    font-size: 1rem; /* Adjust the icon size if necessary */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        position: absolute; /* Position relative to the navigation container */
+        top: 50%;           /* Center vertically */
+        right: 1rem;        /* Pin to the right corner */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        display: flex;      /* Hidden by default, for larger screens */
+        cursor: pointer;
+        flex-direction: column;
+        gap: 0.3rem;
+        z-index: 100;       /* Ensure it appears above other elements */
+    }
+
+    /* Animate toggle button when active */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: var(--light-text-color); /* Matches theme colors */
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .navbar ul {
+        display: none; /* Hidden by default */
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .navbar ul.active {
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        position: absolute;
+        top: 100%;
+        gap: 1rem;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 10;
+        
+    }
+
+    /* Box Style for Navigation Links */
+    .nav-box {
+        display: block;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: left;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--light-text-color);
+        background-color: var(--dark-text-color); /* Fallback color */
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .nav-box:hover {
+        transform: scale(1.02);
+        background-color: var(--link-hover); /* Change on hover */
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center; /* Center all content vertically */
+    }
+
+    .legal-links, .social-links {
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+}
