@@ -21,7 +21,7 @@ body {
 /* Video Container */
 .video-container {
   position: absolute;
-  bottom: 5%;
+  bottom: 12.5%;
   width: 120%;
   height: 120%; /* Full height of the hero section */
   z-index: 0; /* Ensures the video is behind the content */
@@ -454,7 +454,7 @@ body {
     
   }
   
-@media (max-width: 480px) {
+@media (min-width: 320px) {
     /* For smaller screens, make the updates grid vertical */
     .updates-container {
       display: flex;
@@ -463,8 +463,8 @@ body {
       justify-content: center;
     }
     .hero-text h1 {
-      font-size: 3rem;
-      margin-top: 8rem;
+      font-size: 2.5rem;
+      margin-top: 1rem;
       position: sticky;
 
 
@@ -498,11 +498,10 @@ body {
       height: 12px;
     }
     #hadith-display{
-      margin-top: 11rem;
-    }
-    
-
+      margin-top: 12rem;
+    }    
 }
+
 
 
   
