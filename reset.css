@@ -83,10 +83,11 @@ header nav ul {
 header nav ul li a {
     color: var(--light-text-color);
     text-decoration: none;
-    padding: 0.05rem;
+    padding: 0.5rem;
     transition: background 0.3s ease, transform 0.3s ease;
     margin: 0 0.5rem;
     display: inline-flex;
+    background-color: goldenrod;
     justify-content: center;
     align-items: center;
     border-radius: 50%; /* Circular links */
@@ -110,7 +111,7 @@ header .logo-img {
 /* Hover Effect */
 header nav ul li a:hover,
 header nav ul li a.active {
-    background: var(--link-hover);
+    background: rgb(100, 29, 3);
     border-radius: 50%;
     transform: scale(1.1);
 }
@@ -128,7 +129,7 @@ header nav ul li a:hover i {
 
 /* Active State */
 header nav ul li a.active {
-    background: var(--link-hover);
+    background: rgb(128, 74, 2);
     color: var(--light-text-color);
 }
 
