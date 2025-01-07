@@ -326,7 +326,7 @@ header nav ul li a.active {
     }
 
     .navbar ul.active {
-        display: flex;
+        display: grid;
         flex-direction: row;
         background: transparent;
         position: absolute;
