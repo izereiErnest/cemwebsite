@@ -99,6 +99,9 @@ body {
    text-align: center;
    transition: background 0.3s ease;
    margin: 8% ; /* Centers the button horizontally */
+   user-select: none; /* Disables text selection */
+   -webkit-user-select: none; /* For Safari */
+   -ms-user-select: none; /* For older versions of Internet Explorer */
   
   }
 
@@ -351,6 +354,9 @@ body {
     border-radius: 15px;     /* Rounded corners */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
     margin: 20px; 
+    user-select: none; /* Disables text selection */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For older versions of Internet Explorer */
   }
   
   .updates-container {

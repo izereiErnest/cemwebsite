@@ -68,6 +68,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    user-select: none; /* Disables text selection */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For older versions of Internet Explorer */
 }
 
 /* Navigation Bar */
@@ -145,6 +148,9 @@ header nav ul li a.active {
     position: relative; /* Ensure proper positioning for all elements */
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    user-select: none; /* Disables text selection */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For older versions of Internet Explorer */
     
 }
 
