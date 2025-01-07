@@ -97,7 +97,7 @@ header nav ul li a {
 }
 /* Logo Styling */
 header .logo {
-    opacity: 90%;
+    opacity: 100%;
     position: relative;
     top: 0px;
 }
