@@ -1,4 +1,11 @@
 
+/* Disable text selection for the entire document */
+body {
+  user-select: none; /* Disables text selection */
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none; /* For older versions of Internet Explorer */
+}
+
 .hero {
   position: relative; /* Ensures child elements like text are positioned relative to this */
   color: rgb(255, 255, 255);
@@ -73,33 +80,26 @@
 }
 
 /* Fade-in animation */
-@keyframes fadeIn {
+ @keyframes fadeIn {
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
+ }
 
-.btn-primary {
-  display: inline-block; /* Ensure the button behaves like a block-level element */
-  padding: 1rem 2rem;
-  background: rgb(4, 108, 19);
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 15px;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease;
-  margin: 8% ; /* Centers the button horizontally */
+  .btn-primary {
+   display: inline-block; /* Ensure the button behaves like a block-level element */
+   padding: 1rem 2rem;
+   background: rgb(4, 108, 19);
+   color: rgb(255, 255, 255);
+   text-transform: uppercase;
+   font-weight: bold;
+   border-radius: 15px;
+   text-decoration: none;
+   text-align: center;
+   transition: background 0.3s ease;
+   margin: 8% ; /* Centers the button horizontally */
   
-}
-
-
-  
-  .btn-primary:hover {
-      background: blue;
-      color: #ffffff;
   }
 
   .image-slider {

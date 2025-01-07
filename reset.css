@@ -13,13 +13,16 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: linear-gradient(135deg, #5b686c, #47e0ff, #138225, #8ff7e2);
+    background: linear-gradient(135deg, #000430, #000000, #001904, #05332a);
     background-size: 400% 100%;
     background-attachment: fixed; /* Keeps background fixed in place */
     animation: gradientWave 8s ease infinite;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal overflow */
+    user-select: none; /* Disables text selection */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For older versions of Internet Explorer */
 }
 
   ::-webkit-scrollbar {
