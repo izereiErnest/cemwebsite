@@ -454,7 +454,7 @@ body {
     
   }
   
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     /* For smaller screens, make the updates grid vertical */
     .updates-container {
       display: flex;
