@@ -6,86 +6,109 @@ body {
   -ms-user-select: none; /* For older versions of Internet Explorer */
 }
 
+/* Hero Section */
 .hero {
-  position: relative; /* Ensures child elements like text are positioned relative to this */
-  color: rgb(255, 255, 255);
-  text-align: center; /* Align the text in the center */
-  padding: 3rem 1.5rem;
-  min-height: 90vh;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the content vertically */
-  align-items: center; /* Center the content horizontally */
-  overflow: hidden; /* Ensures no overflow from the video */
-  border-radius: 20px;
+  justify-content: center;
+  align-items: center; /* Vertically center the content */
+  border-radius: 30px; /* Rounded corners for the entire hero section */
+  overflow: hidden; /* Prevents overflow outside of rounded corners */
 }
 
-.hero::before {
-  content: "";
+/* Video Container */
+.video-container {
+  position: absolute;
+  top: 0;
+  width: 120%;
+  height: 120%; /* Full height of the hero section */
+  z-index: 0; /* Ensures the video is behind the content */
+  overflow: hidden;
+}
+
+/* Vimeo Background Video Styling */
+.hero-video {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%; /* Ensures the video takes up full width */
+  height: 100%; /* Ensures the video takes up full height */
+  object-fit: cover; /* Ensures the video covers the section without distortion */
+  opacity: 100%; /* Keeps the video fully visible */
+  pointer-events: none; /* Prevents interaction with the video */
+  border-radius: 30px; /* Rounded corners for the video itself */
+}
+
+/* Hero Content Container */
+.hero-content {
+  position: relative;
+  z-index: 1; /* Ensure the content appears above the video */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  border-radius: 30px; /* Rounded corners for the content box */
 }
 
-.hero video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire section */
-  opacity: 100%; /* Reduces video opacity to 50% */
-  z-index: 0; /* Keeps the video behind the text */
-  pointer-events: none; /* Ensures the video doesn't interfere with text interactions */
+/* Hero Text */
+.hero-text {
+  color: white;
+  font-size: 2rem;
+  z-index: 1; /* Ensures text appears above the video */
 }
 
-  .hero-text h1 {
-    color: #ffffff;
-    z-index: 1;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.hero-text h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero-text p {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 300px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+#hadith-display {
+  display: flex;
+  font-size: 1rem; /* Adjust font size */
+  margin-top: 1rem;
+  line-height: 1.6; /* Adjust line height for readability */
+  color: rgb(8, 58, 8); /* Text color */
+  background: linear-gradient(135deg, #03ff2d, #68f3d7); /* Gradient background */
+  text-align: center;
+  border-radius: 30px; /* Rounded corners for the Hadith box */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  width: 100%; /* Ensure it is responsive */
+  max-width: 350px; /* Max width to control card size */
+  padding: 1rem 2rem; /* Adjust padding to reduce box size */
+  margin-left: auto; /* Center the card horizontally */
+  margin-right: auto;
+  opacity: 0; /* Initially invisible */
+  transform: translateY(20px); /* Start position for animation */
+  animation: fadeIn 1s forwards; /* Fade in animation */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .hero-text p {
-    font-size: 0.7rem;
-    margin-bottom: 2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 300px;
-    word-wrap: break-word;
-    text-align: center;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  #hadith-display {
-    display: flex;
-    font-size: 1em; /* Adjust font size */
-    margin-top: 1rem;
-    line-height: 1.6; /* Adjust line height for readability */
-    color: rgb(8, 58, 8); /* Text color */
-    background: linear-gradient(135deg, #03ff2d, #68f3d7); /* Gradient background */
-    text-align: center;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-    width: 100%; /* Ensure it is responsive */
-    max-width: 300px; /* Max width to control card size */
-    padding: 3rem; /* Add padding */
-    margin-left: auto; /* Center the card horizontally */
-    margin-right: auto;
-    opacity: 0; /* Initially invisible */
-    transform: translateY(20px); /* Start position for animation */
-    animation: fadeIn 1s forwards; /* Fade in animation */
 }
-
-/* Fade-in animation */
- @keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
- }
 
   .btn-primary {
    display: inline-block; /* Ensure the button behaves like a block-level element */
@@ -461,20 +484,11 @@ body {
       width: 12px;
       height: 12px;
     }
-    .player {
-      width: 350px;
-      margin: auto;
-      background-image: url('1Player.jpg');
-      background-size: cover; /* Cover the entire element */
-      background-repeat: no-repeat; /* Prevent tiling */
-      background-position: center; /* Center the image */
-      border-radius: 15px;
-      padding: 20px;
-      color: #fff;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-  }
+    
+
+}
+
+
   
   
   
