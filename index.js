@@ -285,6 +285,6 @@ document.addEventListener("DOMContentLoaded", () => {
     displayHadith();
   
     // Change Hadith every 10 seconds
-    setInterval(displayHadith, 10000);
+    setInterval(displayHadith, 20000);
      
 });    

@@ -9,19 +9,19 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
+  height: 100vh;
+  overflow: visible;
   display: flex;
   justify-content: center;
   align-items: center; /* Vertically center the content */
-  border-radius: 30px; /* Rounded corners for the entire hero section */
   overflow: hidden; /* Prevents overflow outside of rounded corners */
+
 }
 
 /* Video Container */
 .video-container {
   position: absolute;
-  top: 0;
+  bottom: 5%;
   width: 120%;
   height: 120%; /* Full height of the hero section */
   z-index: 0; /* Ensures the video is behind the content */
@@ -62,11 +62,24 @@ body {
   z-index: 1; /* Ensures text appears above the video */
 }
 
-.hero-text h1 {
-  color: #ffffff;
+/* Hero Text Container */
+.hero-text {
+  position: relative;
+  z-index: 1; /* Ensures text appears above the video */
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/* Hero Heading */
+.hero-heading {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ffffff;
 }
 
 .hero-text p {
@@ -78,23 +91,23 @@ body {
   text-align: center;
 }
 
-#hadith-display {
-  display: flex;
-  font-size: 1rem; /* Adjust font size */
-  margin-top: 1rem;
-  line-height: 1.6; /* Adjust line height for readability */
+/* Hero Hadith Box */
+.hero-hadith {
+  font-size: 0.9rem;
+  margin-top: 1rem; /* Margin for the hadith box to separate from the heading */
+  line-height: 1.6;
   color: rgb(8, 58, 8); /* Text color */
   background: linear-gradient(135deg, #03ff2d, #68f3d7); /* Gradient background */
   text-align: center;
-  border-radius: 30px; /* Rounded corners for the Hadith box */
+  border-radius: 15px; /* Rounded corners for the Hadith box */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
   width: 100%; /* Ensure it is responsive */
   max-width: 350px; /* Max width to control card size */
-  padding: 1rem 2rem; /* Adjust padding to reduce box size */
-  margin-left: auto; /* Center the card horizontally */
+  padding: 1rem; /* Adjust padding */
+  margin-left: auto;
   margin-right: auto;
-  opacity: 0; /* Initially invisible */
-  transform: translateY(20px); /* Start position for animation */
+  opacity: 0;
+  transform: translateY(20px);
   animation: fadeIn 1s forwards; /* Fade in animation */
 }
 
@@ -450,10 +463,10 @@ body {
       justify-content: center;
     }
     .hero-text h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      position: relative;
-      top: -100px;
+      font-size: 3rem;
+      margin-top: 8rem;
+      position: sticky;
+
 
     }
     .btn-primary {
@@ -483,6 +496,9 @@ body {
     .container #nav_slide .dots {
       width: 12px;
       height: 12px;
+    }
+    #hadith-display{
+      margin-top: 11rem;
     }
     
 
