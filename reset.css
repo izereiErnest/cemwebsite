@@ -318,6 +318,10 @@ header nav ul li a.active {
         display: block;
         transition: all 0.3s ease;
     }
+    header nav ul li a {
+        width: 30px;
+        height: 30px;
+    }
 
     .navbar ul {
         display: none; /* Hidden by default */
@@ -326,7 +330,7 @@ header nav ul li a.active {
     }
 
     .navbar ul.active {
-        display: grid;
+        display: flex;
         flex-direction: row;
         background: transparent;
         position: absolute;
