@@ -25,7 +25,7 @@ body {
   width: 120%;
   height: 120%; /* Full height of the hero section */
   z-index: 0; /* Ensures the video is behind the content */
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Vimeo Background Video Styling */
