@@ -99,25 +99,86 @@
     </div>
   </div>
   <div>
+    <div class="audio-player">
+      <div class="song-info">
+          <h2 class="song-title">Select a song to play</h2>
+          <p class="artist">Artist Name</p>
+      </div>
+      
+      <div class="progress-area">
+          <div class="progress-bar"></div>
+      </div>
+      
+      <div class="time-area">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+      </div>
+      
+      <div class="controls">
+          <button class="prev-btn">
+              <i class="fas fa-backward"></i>
+          </button>
+          <button class="play-pause">
+              <i class="fas fa-play"></i>
+          </button>
+          <button class="next-btn">
+              <i class="fas fa-forward"></i>
+          </button>
+          <button class="playlist-btn">
+              <i class="fas fa-list"></i>
+          </button>
+      </div>
+      
+      <div class="volume-container">
+          <i class="fas fa-volume-up"></i>
+          <input type="range" min="0" max="100" value="70" class="volume-slider">
+      </div>
+  </div>
 
-  <!-- Updates Section -->
-  <section class="updates">
-    <h2>INSIDE CEM</h2>
-    <div class="updates-container">
-      <a href="helping-patients.html" class="update-item">
-        <h3>Helping Patients</h3>
-      </a>
-      <a href="cem-groups.html" class="update-item">
-        <h3>CEM Groups</h3>
-      </a>
-      <a href="general-gatherings.html" class="update-item">
-        <h3>Gatherings</h3>
-      </a>
+  <div class="playlist-popup">
+      <div class="playlist-header">
+          <h3>Playlist</h3>
+          <button class="close-playlist">
+              <i class="fas fa-times"></i>
+          </button>
+      </div>
+      <ul class="playlist">
+          <li data-src="1.mp3" class="playlist-item">
+              <div class="song-details">
+                  <span class="playlist-song-name">Song One</span>
+                  <span class="playlist-artist">Artist One</span>
+              </div>
+              <span class="song-duration">3:45</span>
+          </li>
+          <!-- Add more songs here -->
+      </ul>
+  </div>
+    <div class="buttons-container">
+      <button onclick="window.location.href='helping-patients.html'" class="gradient-border-btn">
+        <span>Helping Patients</span>
+      </button>
+      <button onclick="window.location.href='cem-groups.html'" class="gradient-border-btn">
+        <span>CEM Groups</span>
+      </button>
+      <button onclick="window.location.href='general-gatherings.html'" class="gradient-border-btn">
+        <span>Gatherings</span>
+      </button>
+      <button onclick="window.location.href='ramadhan.html'" class="gradient-border-btn">
+        <span>Ramadhan</span>
+      </button>
+      <button onclick="window.location.href='cem-history.html'" class="gradient-border-btn">
+        <span>CEM History</span>
+      </button>
+      <button onclick="window.location.href='committee.html'" class="gradient-border-btn">
+        <span>Committee</span>
+      </button>
     </div>
-    <div>
-      <a href="Donations.html" class="btn-primary" aria-label="Donate Now">Donate</a>
+    <div class="donate-container">
+      <button onclick="window.location.href='Donations.html'" class="gradient-border-btn donate-btn" aria-label="Donate Now">
+        <span>Donate</span>
+      </button>
     </div>
-  </section>
+
 
   <!-- Footer Section -->
   <footer class="footer">

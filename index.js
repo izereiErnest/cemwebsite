@@ -1,45 +1,154 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const updatesContainer = document.querySelector(".updates-container");
-  
-    const updates = [
-        { 
-            title: "RAMADHAN", 
-            description: "", 
-            background: "linear-gradient(130deg, #2D3436, #636E72, #001904, #00B894)", 
-            link: "ramadhan.html" // Link to the page
+// script.js
+ const audioPlayer = {
+    audio: document.querySelector('#main-audio'),
+    playPauseBtn: document.querySelector('.play-pause'),
+    prevBtn: document.querySelector('.prev-btn'),
+    nextBtn: document.querySelector('.next-btn'),
+    playlistBtn: document.querySelector('.playlist-btn'),
+    closePlaylistBtn: document.querySelector('.close-playlist'),
+    playlistPopup: document.querySelector('.playlist-popup'),
+    playlist: document.querySelector('.playlist'),
+    progressArea: document.querySelector('.progress-area'),
+    progressBar: document.querySelector('.progress-bar'),
+    songTitle: document.querySelector('.song-title'),
+    artist: document.querySelector('.artist'),
+    currentTime: document.querySelector('.current-time'),
+    maxDuration: document.querySelector('.max-duration'),
+    volumeSlider: document.querySelector('.volume-slider'),
+    currentTrack: 0,
+    
+     songs: [
+        {
+            title: "Song One",
+            artist: "Artist One",
+            src: "audio/song1.mp3"
         },
-        { 
-            title: "CEM HISTORY", 
-            description: "", 
-            background: "linear-gradient(135deg, #2D3436, #636E72, #001904, #00B894)", 
-            link: "cem-history.html" // Link to the page
-        },
-        { 
-            title: "COMMITTEE", 
-            description: "", 
-            background: "linear-gradient(135deg, #2D3436, #636E72, #001904, #00B894)", 
-            link: "committee.html" // Link to the page
-        },
-    ];
-  
-    updates.forEach((update) => {
-        const updateItem = document.createElement("a");
-        updateItem.classList.add("update-item");
+        // Add more songs here
+     ],
+
+     init() {
+        this.bindEvents();
+        this.loadSong(0);
+        this.renderPlaylist();
+     },
+
+     bindEvents() {
+        // Play/Pause button
+        this.playPauseBtn.addEventListener('click', () => this.togglePlay());
+
+        // Previous/Next buttons
+        this.prevBtn.addEventListener('click', () => this.changeSong('prev'));
+        this.nextBtn.addEventListener('click', () => this.changeSong('next'));
+
+        // Playlist toggle
+        this.playlistBtn.addEventListener('click', () => this.togglePlaylist());
+        this.closePlaylistBtn.addEventListener('click', () => this.togglePlaylist());
+
+        // Progress bar
+        this.progressArea.addEventListener('click', (e) => this.setProgress(e));
         
-        // Set the link
-        updateItem.href = update.link;
-  
-        // Apply unique background
-        updateItem.style.background = update.background;
-  
-        // Add content
-        updateItem.innerHTML = `
-            <h3>${update.title}</h3>
-            <p>${update.description}</p>
-        `;
-  
-        updatesContainer.appendChild(updateItem);
-    });
+        // Audio events
+        this.audio.addEventListener('timeupdate', () => this.updateProgress());
+        this.audio.addEventListener('ended', () => this.changeSong('next'));
+        
+        // Volume control
+        this.volumeSlider.addEventListener('input', (e) => this.setVolume(e));
+     },
+
+     togglePlay() {
+        if (this.audio.paused) {
+            this.audio.play();
+            this.playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            this.audio.pause();
+            this.playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+     },
+
+     loadSong(index) {
+        const song = this.songs[index];
+        this.currentTrack = index;
+        this.audio.src = song.src;
+        this.songTitle.textContent = song.title;
+        this.artist.textContent = song.artist;
+        
+        // Update playlist highlighting
+        document.querySelectorAll('.playlist-item').forEach(item => {
+            item.classList.remove('playing');
+        });
+        document.querySelector(`[data-index="${index}"]`)?.classList.add('playing');
+     },
+
+     changeSong(direction) {
+        let newIndex = this.currentTrack;
+        if (direction === 'next') {
+            newIndex = (this.currentTrack + 1) % this.songs.length;
+        } else {
+            newIndex = (this.currentTrack - 1 + this.songs.length) % this.songs.length;
+        }
+        this.loadSong(newIndex);
+        this.audio.play();
+        this.playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+     },
+
+     updateProgress() {
+        const duration = this.audio.duration;
+        const currentTime = this.audio.currentTime;
+        const progressPercent = (currentTime / duration) * 100;
+        this.progressBar.style.width = `${progressPercent}%`;
+        
+        // Update time displays
+        this.currentTime.textContent = this.formatTime(currentTime);
+        this.maxDuration.textContent = this.formatTime(duration);
+     },
+
+    setProgress(e) {
+        const width = this.progressArea.clientWidth;
+        const clickX = e.offsetX;
+        const duration = this.audio.duration;
+        this.audio.currentTime = (clickX / width) * duration;
+    },
+
+    setVolume(e) {
+        const volume = e.target.value / 100;
+        this.audio.volume = volume;
+    },
+
+    togglePlaylist() {
+        this.playlistPopup.classList.toggle('show');
+    },
+
+    renderPlaylist() {
+        this.playlist.innerHTML = this.songs.map((song, index) => `
+            <li class="playlist-item" data-index="${index}" onclick="audioPlayer.playFromPlaylist(${index})">
+                <div class="song-details">
+                    <span class="playlist-song-name">${song.title}</span>
+                    <span class="playlist-artist">${song.artist}</span>
+                </div>
+                <span class="song-duration">0:00</span>
+            </li>
+        `).join('');
+    },
+
+    playFromPlaylist(index) {
+        this.loadSong(index);
+        this.audio.play();
+        this.playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        this.togglePlaylist();
+    },
+
+    formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60) || 0;
+        const remainingSeconds = Math.floor(seconds % 60) || 0;
+        return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    }
+};
+
+// Initialize the audio player
+audioPlayer.init();
+
+
     // Hadith Section
     const hadithDisplay = document.getElementById("hadith-display");
     
@@ -286,5 +395,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Change Hadith every 10 seconds
     setInterval(displayHadith, 20000);
+    
      
 });    

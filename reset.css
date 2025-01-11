@@ -86,9 +86,9 @@ header nav ul {
 header nav ul li a {
     color: var(--light-text-color);
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.3rem;
     transition: background 0.3s ease, transform 0.3s ease;
-    margin: 0 27px;
+    margin: 0 15px;
     display: inline-flex;
     background-color: goldenrod;
     justify-content: center;
@@ -325,8 +325,11 @@ header nav ul li a.active {
         transition: all 0.3s ease;
     }
     header nav ul li a {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
+        margin-left: 0.05rem;
+        display: flex;
+ 
     }
 
     .navbar ul {
@@ -342,7 +345,7 @@ header nav ul li a.active {
         position: absolute;
         top: 100%;
         gap: 1rem;
-        left: 20px;
+        left: 30px;
         width: 90%;
         padding: 1rem 0;
         z-index: 10;
