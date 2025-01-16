@@ -29,7 +29,6 @@
 .hero p {
   font-size: 1.5rem;
   margin-top: 1rem;
-  color: var(--secondary-color);
 }
 
 /* Video Gallery Section */
@@ -45,7 +44,7 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--highlight-color);
+  color: rgb(86, 82, 122)
 }
 
 /* Video List Styles */

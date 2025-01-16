@@ -5,7 +5,7 @@
   background: linear-gradient(135deg, #092137, #114920); /* Primary gradient */
   color: #FFFFFF; /* Light text color */
   border-radius: 30px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   opacity: 0; /* Start as invisible */
   transform: translateY(-30px); /* Move slightly up */
   animation: fadeInUp 1s forwards; /* Apply fade-in-up animation */
@@ -41,7 +41,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow color */
   position: relative;
   overflow: hidden;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   opacity: 0; /* Start as invisible */
   transform: translateY(30px); /* Start below */
   animation: slideInUp 0.6s ease-out forwards; /* Slide in from the bottom */

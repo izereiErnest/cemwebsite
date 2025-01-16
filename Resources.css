@@ -9,7 +9,7 @@
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 1s forwards;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Existing Hero Elements */
@@ -21,7 +21,7 @@
 .resources-hero p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   color: #F4EDE3;
 }
 
@@ -65,13 +65,13 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .resource-item p {
   font-size: 1rem;
   color: #B0B0B0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* New Styles for Interactive Features */
@@ -204,14 +204,14 @@
   font-size: 18px;
   margin-bottom: 10px;
   color: #ffffff;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .podcast-entry p {
   font-size: 14px;
   margin-bottom: 10px;
   color: #666;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .podcast-links {

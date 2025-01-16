@@ -32,15 +32,14 @@
 
 .hero h1 {
   font-size: 2.5rem;
-  color: blue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-top: 1rem;
-  color: var(--secondary-color);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Activities Section */
@@ -66,8 +65,8 @@
   font-size: 2rem;
   margin-bottom: 20px;
   padding: 7px;
-  color: blue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(84, 84, 120);
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Cards Container */
@@ -92,7 +91,7 @@
 
 .card h3 {
   font-size: 1.5rem;
-  color: blue;
+  color: rgb(54, 54, 81);
 }
 
 .card p {

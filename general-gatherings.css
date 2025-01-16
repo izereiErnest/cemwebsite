@@ -23,15 +23,14 @@
 
 .hero h1 {
   font-size: 2.5rem;
-  color: blue;
+  color: rgb(255, 255, 255);
   margin-bottom: 1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: var(--secondary-color);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Events Section */
@@ -47,8 +46,8 @@
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: blue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(71, 71, 101);
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Gathering Cards */
@@ -70,13 +69,13 @@
   font-size: 1.5rem;
   color: var(--light-text);
   margin-bottom: 1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .gathering p {
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Past Events Button */
@@ -91,7 +90,7 @@
   margin: 2rem auto;
   display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .past-events-btn:hover {
@@ -120,7 +119,7 @@
 .video-list-card h2 {
   color: var(--light-text);
   margin-bottom: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Video Items */
@@ -156,13 +155,13 @@
   font-size: 1.2rem;
   color: var(--light-text);
   margin-bottom: 0.5rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .video-description {
   color: var(--secondary-color);
   line-height: 1.5;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Video Player */

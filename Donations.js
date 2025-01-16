@@ -1,42 +1,22 @@
-document.getElementById("donation-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
+function handleUSSD(event) {
+    event.preventDefault(); // Prevent form submission
 
-    const phone = document.getElementById("phone").value;
-    const amount = document.getElementById("amount").value;
-    const messageElement = document.getElementById("message");
+    const amount = document.getElementById('amount').value;
 
-    messageElement.classList.add("hidden");
-
-    // Validate phone number (basic check for MTN Rwanda numbers)
-    const phoneRegex = /^078\d{7}$/;
-    if (!phone || !phoneRegex.test(phone)) {
-        messageElement.textContent = "Please enter a valid MTN Rwanda phone number (e.g., 078XXXXXXX).";
-        messageElement.classList.remove("hidden");
-        return;
-    }
-
-    // Validate donation amount (ensure it’s a positive number)
+    // Validate the amount input
     if (!amount || amount <= 0) {
-        messageElement.textContent = "Please enter a valid donation amount.";
-        messageElement.classList.remove("hidden");
+        alert('Please enter a valid donation amount.');
         return;
     }
 
-    try {
-        // Mock API call (replace with actual MTN API integration)
-        messageElement.textContent = "Processing your donation...";
-        messageElement.classList.remove("hidden");
+    // Constant MTN MoMo code (replace "12345" with your actual code)
+    const momoCode = "173486";
 
-        // Simulate network call with a delay
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Format the USSD code
+    const ussdCode = `*182*8*1*${momoCode}*${amount}#`;
 
-        // Mock success response
-        messageElement.textContent = `Thank you for your donation of ${amount} RWF!`;
-        messageElement.classList.add("success");
-        messageElement.classList.remove("error", "processing");
-    } catch (error) {
-        messageElement.textContent = "An error occurred while processing your donation. Please try again.";
-        messageElement.classList.add("error");
-        messageElement.classList.remove("success", "processing");
-    }
-});
+    // Generate a tel: link
+    const ussdLink = document.getElementById('ussd-link');
+    ussdLink.href = `tel:${encodeURIComponent(ussdCode)}`;
+    ussdLink.click(); // Programmatically click the link
+}

@@ -6,13 +6,14 @@
   <meta name="description" content="Welcome to the CEM Community website. Stay updated with our events, resources, and programs.">
   <meta name="author" content="CEM Community">
   <title>Home | CEM Community</title>
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="cookies.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="9.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/6fd5dcc666.js" crossorigin="anonymous"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -39,12 +40,6 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
-    <div class="video-container">
-      <video autoplay muted loop playsinline>
-        <source src="B1CEM.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
     <div class="hero-text">
       <h1 class="hero-heading">Welcome to the CEM Community Website</h1>
       <p id="hadith-display" class="hero-hadith" aria-live="polite">
@@ -99,60 +94,8 @@
     </div>
   </div>
   <div>
-    <div class="audio-player">
-      <div class="song-info">
-          <h2 class="song-title">Select a song to play</h2>
-          <p class="artist">Artist Name</p>
-      </div>
-      
-      <div class="progress-area">
-          <div class="progress-bar"></div>
-      </div>
-      
-      <div class="time-area">
-          <span class="current-time">0:00</span>
-          <span class="max-duration">0:00</span>
-      </div>
-      
-      <div class="controls">
-          <button class="prev-btn">
-              <i class="fas fa-backward"></i>
-          </button>
-          <button class="play-pause">
-              <i class="fas fa-play"></i>
-          </button>
-          <button class="next-btn">
-              <i class="fas fa-forward"></i>
-          </button>
-          <button class="playlist-btn">
-              <i class="fas fa-list"></i>
-          </button>
-      </div>
-      
-      <div class="volume-container">
-          <i class="fas fa-volume-up"></i>
-          <input type="range" min="0" max="100" value="70" class="volume-slider">
-      </div>
-  </div>
+    
 
-  <div class="playlist-popup">
-      <div class="playlist-header">
-          <h3>Playlist</h3>
-          <button class="close-playlist">
-              <i class="fas fa-times"></i>
-          </button>
-      </div>
-      <ul class="playlist">
-          <li data-src="1.mp3" class="playlist-item">
-              <div class="song-details">
-                  <span class="playlist-song-name">Song One</span>
-                  <span class="playlist-artist">Artist One</span>
-              </div>
-              <span class="song-duration">3:45</span>
-          </li>
-          <!-- Add more songs here -->
-      </ul>
-  </div>
     <div class="buttons-container">
       <button onclick="window.location.href='helping-patients.html'" class="gradient-border-btn">
         <span>Helping Patients</span>
@@ -185,8 +128,8 @@
     <p>&copy; 2025 CEM. All rights reserved.</p>
     <div class="footer-content">
       <div class="legal-links">
-        <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
-        <a href="terms-conditions.html" class="legal-link">Terms & Conditions</a>
+        <a href="privacy_policy.html" class="legal-link">Privacy Policy</a>
+        <a href="terms&conditions.html" class="legal-link">Terms & Conditions</a>
       </div>
       <div class="social-links">
         <a href="https://wa.me/250783486293" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
@@ -201,9 +144,21 @@
       </div>
     </div>
   </footer>
+  <div id="cookie-banner" class="cookie-banner hidden">
+    <p>
+        This website uses cookies to ensure you get the best experience. 
+        <a href="privacy_policy.html" target="_blank">Learn more</a>.
+    </p>
+    <div class="cookie-buttons">
+        <button id="accept-cookies" class="cookie-button accept">Accept</button>
+        <button id="reject-cookies" class="cookie-button reject">Reject</button>
+    </div>
+</div>
+
 
   <!-- JavaScript Files -->
   <script src="reset.js"></script>
   <script src="index.js"></script>
+  <script src="cookies.js"></script>
 </body>
 </html>

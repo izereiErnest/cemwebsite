@@ -8,6 +8,11 @@
     --dark-text-color: #1C1C1C; /* Almost Black */
     --shadow-color: rgba(0, 0, 0, 0.5); /* Dark Shadow */
 }
+/* Remove tap highlight on Android */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -344,10 +349,10 @@ header nav ul li a.active {
         background: transparent;
         position: absolute;
         top: 100%;
-        gap: 1rem;
-        left: 30px;
+        gap: 0.5px !important;
+        left: 25px;
         width: 90%;
-        padding: 1rem 0;
+        padding: 1rem 1rem;
         z-index: 10;
         
     }

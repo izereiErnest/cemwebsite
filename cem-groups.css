@@ -20,7 +20,7 @@
   box-shadow: 0 4px 6px var(--shadow-color);
   transform: translateY(-20px); /* Start slightly above */
   animation: fadeInUp 1s forwards; /* Apply animation */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Fade In and Move Up Animation */
@@ -35,7 +35,7 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   color: blue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .hero p {
@@ -43,7 +43,7 @@
   margin-top: 1rem;
   font-family: 'Georgia', serif;
   color: var(--secondary-color);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Groups Section */
@@ -72,7 +72,7 @@
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 4px var(--shadow-color);
   color: blue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Groups Container */
@@ -112,7 +112,7 @@
   font-size: 1.8rem;
   color: white;
   margin-bottom: 1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .group-card .group-details {
@@ -124,7 +124,7 @@
   text-align: left;
   margin-top: 1rem;
   color: var(--text-color);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .group-card:hover .group-details {

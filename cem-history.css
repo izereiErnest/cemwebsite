@@ -33,16 +33,15 @@
 
 .hero h1 {
   font-size: 2.5rem;
-  color: blue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-top: 1rem;
   font-family: 'Georgia', serif;
-  color: var(--secondary-color);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* History Details Section */
@@ -59,7 +58,7 @@
   text-align: center;
   margin-bottom: 1rem;
   color: gray;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 .history-details p {
@@ -68,5 +67,5 @@
   margin-bottom: 1rem;
   color: gray;
   letter-spacing: 0.1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
