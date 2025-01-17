@@ -350,7 +350,7 @@ header nav ul li a.active {
         position: absolute;
         top: 100%;
         gap: 0.5px !important;
-        left: 25px;
+        left: 1.5rem;
         width: 90%;
         padding: 1rem 1rem;
         z-index: 10;

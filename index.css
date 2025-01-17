@@ -55,7 +55,7 @@ body {
 }
 
 .hero-text p {
-  font-size: 0.7rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   font-family: 'Source Sans Pro', Arial, sans-serif;
   width: 300px;
@@ -81,6 +81,7 @@ body {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1s forwards; /* Fade in animation */
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Fade In Animation */
@@ -94,24 +95,6 @@ body {
     transform: translateY(0);
   }
 }
-
-  .btn-primary {
-   display: inline-block; /* Ensure the button behaves like a block-level element */
-   padding: 1rem 2rem;
-   background: rgb(4, 108, 19);
-   color: rgb(255, 255, 255);
-   text-transform: uppercase;
-   font-weight: bold;
-   border-radius: 15px;
-   text-decoration: none;
-   text-align: center;
-   transition: background 0.3s ease;
-   margin: 8% ; /* Centers the button horizontally */
-   user-select: none; /* Disables text selection */
-   -webkit-user-select: none; /* For Safari */
-   -ms-user-select: none; /* For older versions of Internet Explorer */
-  
-  }
 
   .image-slider {
     display: flex;
@@ -459,8 +442,8 @@ body {
       justify-content: center;
     }
     .hero-text h1 {
-      font-size: 2.5rem;
-      margin-top: 5rem;
+      font-size: 4rem;
+      margin-top: 3rem;
       position: sticky;
 
 
@@ -494,7 +477,7 @@ body {
       height: 12px;
     }
     #hadith-display{
-      margin-top: 12rem;
+      margin-top: 5rem;
     }  
     .buttons-container {
       grid-template-columns: 1fr;
