@@ -103,7 +103,7 @@
 }
 
 .card {
-  background: linear-gradient(135deg, #2C3E50, #3A5F44); /* Same gradient for a cohesive look */
+  background: linear-gradient(135deg, #242d37, #06250e); /* Same gradient for a cohesive look */
   padding: 2rem;
   border-radius: 15px;
   width: 100%;
@@ -116,11 +116,14 @@
 .card h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  text-decoration: underline;
 }
 
 .card p {
   font-size: 1.2rem;
-  color: #F4EDE3; /* Secondary color */
+  color: #7db5ed; /* Secondary color */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Footer Styling */

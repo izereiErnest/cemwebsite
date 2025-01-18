@@ -44,7 +44,7 @@ function getLocationName(latitude, longitude) {
         .then(data => {
             if (data.results && data.results.length > 0) {
                 const location = data.results[0].formatted; // Get the formatted address
-                document.getElementById("location").textContent = `Your Location: ${location}`;
+                document.getElementById("location").textContent = ` ${location}`;
             } else {
                 document.getElementById("location").textContent = "Unable to fetch location name.";
             }
